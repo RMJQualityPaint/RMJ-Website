@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Gallery | RMJ Quality Painting | Lake Oconee, GA</title>
+  <meta name="description" content="Browse RMJ Quality Painting's before &amp; after project gallery. Interior painting, exterior painting, epoxy flooring &amp; more across the Lake Oconee area.">
+  <link rel="canonical" href="https://rmjqualitypainting.com/gallery.html">
+  <meta property="og:title" content="Project Gallery | RMJ Quality Painting">
+  <meta property="og:description" content="See our work — before &amp; after transformations across Central Georgia.">
+  <meta property="og:url" content="https://rmjqualitypainting.com/gallery.html">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%23C41E3A'/><text y='.9em' font-size='80' x='10'>🖌</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--red:#C41E3A;--red-dark:#9B1530;--red-light:#D63251;--black:#0A0A0A;--dark:#111111;--white:#FFFFFF;--off:#F8F8F8;--gl:#E8E8E8;--gray:#888888;--gd:#555555;--fd:'Playfair Display',Georgia,serif;--fb:'Montserrat',sans-serif;--mw:1240px;--r:4px;--rl:8px;--tr:all .3s cubic-bezier(.4,0,.2,1)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--fb);font-size:16px;line-height:1.6;color:var(--dark);background:var(--white);overflow-x:hidden}
+    h1,h2,h3{font-family:var(--fd);line-height:1.2}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:100%;max-width:var(--mw);margin:0 auto;padding:0 24px}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    /* NAV */
+    #hdr{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 24px;height:80px;display:flex;align-items:center;background:var(--black);box-shadow:0 2px 24px rgba(0,0,0,.5)}
+    .navi{width:100%;max-width:var(--mw);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .nlogo{font-family:var(--fd);font-size:22px;font-weight:700;color:var(--white);letter-spacing:-.5px}
+    .nlogo span{color:var(--red)}
+    .nlinks{display:flex;align-items:center;gap:32px}
+    .nlinks a{font-size:13px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:rgba(255,255,255,.75);transition:var(--tr)}
+    .nlinks a:hover,.nlinks a.active{color:var(--white)}
+    .nlinks a.active{color:var(--red)}
+    .ncta{background:var(--red) !important;color:var(--white) !important;padding:10px 22px;border-radius:var(--r);font-weight:700 !important}
+    .ncta:hover{background:var(--red-dark) !important}
+    .hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+    .hbg span{display:block;width:24px;height:2px;background:var(--white);transition:var(--tr);border-radius:2px}
+    .hbg.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hbg.open span:nth-child(2){opacity:0}
+    .hbg.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mmenu{position:fixed;top:80px;left:0;right:0;background:var(--black);padding:24px;display:none;flex-direction:column;gap:4px;z-index:999;border-top:1px solid rgba(255,255,255,.1)}
+    .mmenu.open{display:flex}
+    .mmenu a{color:var(--white);font-size:15px;font-weight:500;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08);transition:var(--tr)}
+    .mmenu a:hover{color:var(--red);padding-left:8px}
+    .mmcta{background:var(--red);text-align:center;border-radius:var(--r);margin-top:16px;padding:14px;font-weight:700}
+
+    /* PAGE HERO */
+    .phero{padding:140px 0 64px;background:var(--black);position:relative;overflow:hidden}
+    .phero::before{content:'';position:absolute;top:-30%;right:-5%;width:45%;height:160%;background:linear-gradient(135deg,var(--red) 0%,#8B0000 100%);clip-path:polygon(30% 0%,100% 0%,100% 100%,0% 100%);opacity:.12}
+    .phero::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:80px 80px}
+    .phero-inner{position:relative;z-index:2}
+    .phero-back{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:24px;transition:var(--tr)}
+    .phero-back:hover{color:var(--red)}
+    .phero-back svg{width:16px;height:16px}
+    .phero-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--red-light);margin-bottom:16px}
+    .phero h1{font-size:clamp(36px,5vw,64px);font-weight:700;color:var(--white);line-height:1.1;margin-bottom:16px}
+    .phero h1 em{font-style:italic;color:var(--red-light)}
+    .phero-sub{font-size:17px;color:rgba(255,255,255,.6);max-width:520px;line-height:1.7}
+
+    /* FILTERS */
+    .filters{padding:40px 0 0;background:var(--off);border-bottom:1px solid var(--gl)}
+    .filters-inner{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:0}
+    .fbtn{font-family:var(--fb);font-size:13px;font-weight:600;padding:10px 20px;border-radius:100px;border:1.5px solid var(--gl);background:var(--white);color:var(--gd);cursor:pointer;transition:var(--tr);white-space:nowrap}
+    .fbtn:hover{border-color:var(--red);color:var(--red)}
+    .fbtn.active{background:var(--red);border-color:var(--red);color:var(--white)}
+
+    /* GALLERY GRID */
+    .gallery-section{padding:56px 0 96px;background:var(--off)}
+    .gallery-count{font-size:13px;color:var(--gray);margin-bottom:32px}
+    .gallery-count strong{color:var(--dark);font-weight:700}
+    .ggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .gcard{background:var(--white);border-radius:var(--rl);overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.06);transition:var(--tr);cursor:pointer}
+    .gcard:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.12)}
+
+    /* ── BEFORE / AFTER SLIDER ── */
+    .ba-slider{aspect-ratio:4/3;position:relative;overflow:hidden;cursor:ew-resize;user-select:none;-webkit-user-select:none}
+    .ba-before,.ba-after{position:absolute;inset:0}
+    .ba-before img,.ba-after img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none}
+    .ba-after{z-index:2;clip-path:inset(0 50% 0 0)}
+    .ba-handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:rgba(255,255,255,.9);transform:translateX(-50%);z-index:3;pointer-events:none}
+    .ba-handle-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;background:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 16px rgba(0,0,0,.3);pointer-events:auto;cursor:ew-resize}
+    .ba-handle-btn svg{color:var(--red);width:16px;height:16px;flex-shrink:0}
+    .ba-lbl{position:absolute;bottom:12px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:3px 8px;border-radius:2px;z-index:4;pointer-events:none}
+    .ba-lbl-b{left:12px;background:rgba(0,0,0,.5);color:rgba(255,255,255,.8)}
+    .ba-lbl-a{right:12px;background:var(--red);color:var(--white)}
+    .ba-hint{position:absolute;top:12px;left:50%;transform:translateX(-50%);font-size:10px;font-weight:600;letter-spacing:.5px;color:rgba(255,255,255,.95);background:rgba(0,0,0,.5);padding:4px 12px;border-radius:100px;z-index:4;white-space:nowrap;pointer-events:none;transition:opacity .4s}
+    .ba-slider.dragged .ba-hint{opacity:0}
+
+    /* ── SINGLE PHOTO CARD ── */
+    .gcard-img{aspect-ratio:4/3;position:relative;overflow:hidden}
+    .gcard-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none;transition:transform .4s ease}
+    .gcard:hover .gcard-img img{transform:scale(1.04)}
+    .single-badge{position:absolute;bottom:12px;right:12px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:3px 8px;border-radius:2px;background:var(--red);color:var(--white);z-index:2}
+
+    /* shared hover overlay */
+    .card-overlay{position:absolute;inset:0;background:rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s;z-index:5;pointer-events:none}
+    .gcard:hover .card-overlay{opacity:1}
+    .card-overlay svg{width:32px;height:32px;color:var(--white)}
+
+    .gcard-body{padding:20px 20px 18px}
+    .gcard-service{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:6px}
+    .gcard-title{font-family:var(--fd);font-size:18px;font-weight:600;color:var(--black);margin-bottom:4px}
+    .gcard-location{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--gray)}
+    .gcard-location svg{width:12px;height:12px;flex-shrink:0}
+
+    /* ── LIGHTBOX ── */
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.96);z-index:9999;display:none;align-items:center;justify-content:center;padding:24px}
+    .lightbox.open{display:flex}
+    .lb-inner{max-width:900px;width:100%;position:relative}
+    .lb-close{position:absolute;top:-48px;right:0;background:none;border:none;color:var(--white);cursor:pointer;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px;opacity:.7;transition:var(--tr)}
+    .lb-close:hover{opacity:1;color:var(--red)}
+    .lb-close svg{width:20px;height:20px}
+
+    /* lightbox slider */
+    .lb-slider{aspect-ratio:4/3;position:relative;overflow:hidden;border-radius:var(--rl);cursor:ew-resize;user-select:none;-webkit-user-select:none}
+    .lb-sl-before,.lb-sl-after{position:absolute;inset:0}
+    .lb-sl-before img,.lb-sl-after img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none}
+    .lb-sl-after{z-index:2;clip-path:inset(0 50% 0 0)}
+    .lb-sl-handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:rgba(255,255,255,.9);transform:translateX(-50%);z-index:3;pointer-events:none}
+    .lb-sl-handle-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;background:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 20px rgba(0,0,0,.4);pointer-events:auto;cursor:ew-resize}
+    .lb-sl-handle-btn svg{color:var(--red);width:20px;height:20px}
+    .lb-lbl{position:absolute;bottom:16px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border-radius:2px;z-index:4;pointer-events:none}
+    .lb-lbl-b{left:16px;background:rgba(0,0,0,.55);color:rgba(255,255,255,.85)}
+    .lb-lbl-a{right:16px;background:var(--red);color:var(--white)}
+
+    /* lightbox single */
+    .lb-single{aspect-ratio:4/3;border-radius:var(--rl);overflow:hidden;position:relative}
+    .lb-single img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none}
+
+    .lb-info{padding:24px 0 0;display:flex;justify-content:space-between;align-items:flex-end}
+    .lb-service{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:6px}
+    .lb-title{font-family:var(--fd);font-size:26px;font-weight:700;color:var(--white)}
+    .lb-location{font-size:13px;color:rgba(255,255,255,.5);margin-top:4px}
+    .lb-nav{display:flex;gap:12px;flex-shrink:0}
+    .lb-nav-btn{width:44px;height:44px;border:1.5px solid rgba(255,255,255,.2);border-radius:var(--r);background:none;color:var(--white);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:var(--tr)}
+    .lb-nav-btn:hover{border-color:var(--red);background:var(--red)}
+    .lb-nav-btn svg{width:18px;height:18px}
+
+    /* CTA BANNER */
+    .cta-banner{padding:80px 0;background:var(--dark)}
+    .cta-banner-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+    .cta-banner h2{font-size:clamp(24px,3vw,36px);font-weight:700;color:var(--white)}
+    .cta-banner h2 em{font-style:italic;color:var(--red-light)}
+    .cta-banner p{font-size:15px;color:rgba(255,255,255,.55);margin-top:8px;max-width:480px}
+    .cta-btns{display:flex;gap:14px;flex-shrink:0;flex-wrap:wrap}
+    .btnp{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:var(--white);font-family:var(--fb);font-size:14px;font-weight:700;padding:16px 28px;border-radius:var(--r);border:2px solid var(--red);transition:var(--tr)}
+    .btnp:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(196,30,58,.4)}
+    .btno{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--white);font-family:var(--fb);font-size:14px;font-weight:700;padding:16px 28px;border-radius:var(--r);border:2px solid rgba(255,255,255,.25);transition:var(--tr)}
+    .btno:hover{border-color:var(--white);background:rgba(255,255,255,.07);transform:translateY(-2px)}
+
+    /* FOOTER */
+    #ftr{background:var(--black);padding:40px 0;border-top:1px solid rgba(196,30,58,.3)}
+    .ftr-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+    .ftr-brand{font-family:var(--fd);font-size:18px;font-weight:700;color:var(--white)}
+    .ftr-brand span{color:var(--red)}
+    .ftr-links{display:flex;gap:24px}
+    .ftr-links a{font-size:13px;color:rgba(255,255,255,.4);transition:var(--tr)}
+    .ftr-links a:hover{color:rgba(255,255,255,.8)}
+    .ftr-copy{font-size:12px;color:rgba(255,255,255,.25)}
+
+    @media(max-width:1024px){.ggrid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:768px){.nlinks{display:none}.hbg{display:flex}.ggrid{grid-template-columns:1fr}.filters-inner{gap:6px}.cta-banner-inner{flex-direction:column;text-align:center}.cta-btns{justify-content:center}.ftr-inner{flex-direction:column;text-align:center}.lb-info{flex-direction:column;gap:16px;align-items:flex-start}}
+    @media(max-width:480px){.ba-handle-btn{width:34px;height:34px}.lb-sl-handle-btn{width:40px;height:40px}}
+  </style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="navi">
+    <a href="index.html" class="nlogo">RMJ <span>Quality</span> Painting</a>
+    <nav class="nlinks">
+      <a href="index.html#services">Services</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="index.html#property">Property Managers</a>
+      <a href="contact.html" class="ncta">Free Quote</a>
+    </nav>
+    <button class="hbg" id="hbg" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="mmenu" id="mmenu">
+  <a href="index.html">Home</a>
+  <a href="index.html#services">Services</a>
+  <a href="about.html">About Us</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="index.html#property">Property Managers</a>
+  <a href="contact.html" class="mmcta">Get a Free Quote</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="phero">
+  <div class="container phero-inner">
+    <a href="index.html" class="phero-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to Home
+    </a>
+    <div class="phero-tag">Our Portfolio</div>
+    <h1>Before &amp; After<br><em>Transformations</em></h1>
+    <p class="phero-sub">Real projects, real results. Drag the slider on any card to reveal the transformation — from Lake Oconee to Central Georgia.</p>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<div class="filters">
+  <div class="container">
+    <div class="filters-inner" id="filters">
+      <button class="fbtn active" data-filter="all">All Projects</button>
+      <button class="fbtn" data-filter="exterior">Exterior Painting</button>
+      <button class="fbtn" data-filter="interior">Interior Painting</button>
+      <button class="fbtn" data-filter="epoxy">Epoxy Flooring</button>
+      <button class="fbtn" data-filter="cabinet">Cabinet Refinishing</button>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY GRID -->
+<section class="gallery-section">
+  <div class="container">
+    <p class="gallery-count"><strong id="count">12</strong> projects shown</p>
+    <div class="ggrid" id="galleryGrid">
+
+      <!-- 1 · Brick Ranch — SLIDER -->
+      <div class="gcard reveal" data-category="exterior" data-title="Brick Ranch Transformation" data-location="Eatonton, GA" data-before="images/exterior-brick-after.jpg" data-after="images/exterior-brick-before.jpg">
+        <div class="ba-slider">
+          <div class="ba-before"><img src="images/exterior-brick-after.jpg" alt="Before — Brick Ranch"></div>
+          <div class="ba-after"><img src="images/exterior-brick-before.jpg" alt="After — Brick Ranch"></div>
+          <div class="ba-handle"><div class="ba-handle-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/><polyline points="9 6 15 12 9 18"/></svg></div></div>
+          <span class="ba-lbl ba-lbl-b">BEFORE</span>
+          <span class="ba-lbl ba-lbl-a">AFTER</span>
+          <div class="ba-hint">← Drag to compare →</div>
+          <div class="card-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        </div>
+        <div class="gcard-body">
+          <div class="gcard-service">Exterior Painting</div>
+          <div class="gcard-title">Brick Ranch Transformation</div>
+          <div class="gcard-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Eatonton, GA</div>
+        </div>
+      </div>
+
+      <!-- 2 · Commercial Building — SLIDER -->
+      <div class="gcard reveal" data-category="exterior" data-title="Commercial Exterior Repaint" data-location="Eatonton, GA" data-before="images/exterior-commercial-before.jpg" data-after="images/exterior-commercial-after.jpg">
+        <div class="ba-slider">
+          <div class="ba-before"><img src="images/exterior-commercial-before.jpg" alt="Before — Commercial Building"></div>
+          <div class="ba-after"><img src="images/exterior-commercial-after.jpg" alt="After — Commercial Building"></div>
+          <div class="ba-handle"><div class="ba-handle-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/><polyline points="9 6 15 12 9 18"/></svg></div></div>
+          <span class="ba-lbl ba-lbl-b">BEFORE</span>
+          <span class="ba-lbl ba-lbl-a">AFTER</span>
+          <div class="ba-hint">← Drag to compare →</div>
+          <div class="card-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        </div>
+        <div class="gcard-body">
+          <div class="gcard-service">Exterior Painting</div>
+          <div class="gcard-title">Commercial Exterior Repaint</div>
+          <div class="gcard-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Eatonton, GA</div>
+        </div>
+      </div>
+
+      <!-- 3 · Lake Cabin — SLIDER -->
+      <div class="gcard reveal" data-category="exterior" data-title="Lake House Exterior Makeover" data-location="Lake Oconee, GA" data-before="images/exterior-cabin-after.jpg" data-after="images/exterior-cabin-before.jpg">
+        <div class="ba-slider">
+          <div class="ba-before"><img src="images/exterior-cabin-after.jpg" alt="Before — Lake Cabin"></div>
+          <div class="ba-after"><img src="images/exterior-cabin-before.jpg" alt="After — Lake Cabin"></div>
+          <div class="ba-handle"><div class="ba-handle-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/><polyline points="9 6 15 12 9 18"/></svg></div></div>
+          <span class="ba-lbl ba-lbl-b">BEFORE</span>
+          <span class="ba-lbl ba-lbl-a">AFTER</span>
+          <div class="ba-hint">← Drag to compare →</div>
+          <div class="card-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        </div>
+        <div class="gcard-body">
+          <div class="gcard-service">Exterior Painting</div>
+          <div class="gcard-title">Lake House Exterior Makeover</div>
+          <div class="gcard-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Lake Oconee, GA</div>
+        </div>
+      </div>
+
+      <!-- 4 · Kitchen Cabinets — SLIDER -->
+      <div class="gcard reveal" data-category="cabinet" data-title="Full Kitchen Cabinet Refinishing" data-location="Lake Oconee, GA" data-before="images/cabinet-kitchen-after.jpg" data-after="images/cabinet-kitchen-before.jpg">
+        <div class="ba-slider">
+          <div class="ba-before"><img src="images/cabinet-kitchen-after.jpg" alt="Before — Kitchen Cabinets"></div>
+          <div class="ba-after"><img src="images/cabinet-kitchen-before.jpg" alt="After — Kitchen Cabinets"></div>
+          <div class="ba-handle"><div class="ba-handle-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/><polyline points="9 6 15 12 9 18"/></svg></div></div>
+          <span class="ba-lbl ba-lbl-b">BEFORE</span>
+          <span class="ba-lbl ba-lbl-a">AFTER</span>
+          <div class="ba-hint">← Drag to compare →</div>
+          <div class="card-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        </div>
+        <div class="gcard-body">
+          <div class="gcard-service">Cabinet Refinishing</div>
+          <div class="gcard-title">Full Kitchen Cabinet Refinishing</div>
+          <div class="gcard-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Lake Oconee, GA</div>
+        </div>
+      </div>
+
+      <!-- 5 · Commercial Epoxy — SLIDER -->
+      <div class="gcard reveal" data-category="epoxy" data-title="Commercial Epoxy Floor" data-location="Eatonton, GA" data-before="images/epoxy-commercial-after.jpg" data-after="images/epoxy-commercial-before.jpg">
+        <div class="ba-slider">
+          <div class="ba-before"><img src="images/epoxy-commercial-after.jpg" alt="Before — Commercial Epoxy"></div>
+          <div class="ba-after"><img src="images/epoxy-commercial-before.jpg" alt="After — Commercial Epoxy"></div>
+          <div class="ba-handle"><div class="ba-handle-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/><polyline points="9 6 15 12 9 18"/></svg></div></div>
+          <span class="ba-lbl ba-lbl-b">BEFORE</span>
+          <span class="ba-lbl ba-lbl-a">AFTER</span>
+          <div class="ba-hint">← Drag to compare →</div>
+          <div class="card-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        </div>
+        <div class="gcard-body">
+          <div class="gcard-service">Epoxy Flooring</div>
+          <div class="gcard-title">Commercial Office Epoxy Floor</div>
+          <div class="gcard-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Eatonton, GA</div>
+        </div>
+      </div>
+
+      <!-- 6 · Classroom Mural — SLIDER -->
+      <div class="gcard reveal" data-category="interior" data-title="Custom Geometric Accent Wall" data-location="Eatonton, GA" data-before="images/interior-mural-after.jpg" data-after="images/interior-mural-before.jpg">
+        <div class="ba-slider">
+          <div class="ba-before"><img src="images/interior-mural-after.jpg" alt="Before — Geometric Wall"></div>
+          <div class="ba-after"><img src="images/interior-mural-before.jpg" alt="After — Geometric Wall"></div>
+          <div class="ba-handle"><div class="ba-handle-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/><polyline points="9 6 15 12 9 18"/></svg></div></div>
+          <span class="ba-lbl ba-lbl-b">BEFORE</span>
+          <span class="ba-lbl ba-lbl-a">AFTER</span>
+          <div class="ba-hint">← Drag to compare →</div>
+          <div class="card-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        </div>
+        <div class="gcard-body">
+          <div class="gcard-service">Interior Painting</div>
+          <div class="gcard-title">Custom Geometric Accent Wall</div>
+          <div class="gcard-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Eatonton, GA</div>
+        </div>
+      </div>
+
+      <!-- 7 · Luxury Estate — SINGLE -->
+      <div class="gcard reveal" data-category="exterior" data-title="Luxury Estate Exterior" data-location="Reynolds Lake Oconee, GA" data-src="images/exterior-luxury-pool.jpg">
+        <div class="gcard-img">
+          <img src="images/exterior-luxury-pool.jpg" alt="Luxury Estate Exterior">
+          <span class="single-badge">COMPLETED PROJECT</span>
+          <div class="card-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        </div>
+        <div class="gcard-body">
+          <div class="gcard-service">Exterior Painting</div>
+          <div class="gcard-title">Luxury Estate Full Exterior</div>
+          <div class="gcard-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Reynolds Lake Oconee, GA</div>
+        </div>
+      </div>
+
+      <!-- 8 · Luxury Lake Home — SINGLE -->
+      <div class="gcard reveal" data-category="exterior" data-title="Custom Lake Home" data-location="Lake Oconee, GA" data-src="images/exterior-luxury-lake.jpg">
+        <div class="gcard-img">
+          <img src="images/exterior-luxury-lake.jpg" alt="Custom Lake Home Exterior">
+          <span class="single-badge">COMPLETED PROJECT</span>
+          <div class="card-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        </div>
+        <div class="gcard-body">
+          <div class="gcard-service">Exterior Painting</div>
+          <div class="gcard-title">Custom Lake Home Exterior</div>
+          <div class="gcard-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Lake Oconee, GA</div>
+        </div>
+      </div>
+
+      <!-- 9 · Aircraft Hangar Epoxy — SINGLE -->
+      <div class="gcard reveal" data-category="epoxy" data-title="Aircraft Hangar Epoxy Floor" data-location="Eatonton, GA" data-src="images/epoxy-hangar-1.jpg">
+        <div class="gcard-img">
+          <img src="images/epoxy-hangar-1.jpg" alt="Aircraft Hangar Epoxy Floor">
+          <span class="single-badge">COMPLETED PROJECT</span>
+          <div class="card-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        </div>
+        <div class="gcard-body">
+          <div class="gcard-service">Epoxy Flooring</div>
+          <div class="gcard-title">Aircraft Hangar Epoxy Floor</div>
+          <div class="gcard-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Eatonton, GA</div>
+        </div>
+      </div>
+
+      <!-- 10 · Metallic Epoxy — SINGLE -->
+      <div class="gcard reveal" data-category="epoxy" data-title="Metallic Epoxy Commercial Floor" data-location="Eatonton, GA" data-src="images/epoxy-metallic.jpg">
+        <div class="gcard-img">
+          <img src="images/epoxy-metallic.jpg" alt="Metallic Epoxy Commercial Floor">
+          <span class="single-badge">COMPLETED PROJECT</span>
+          <div class="card-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        </div>
+        <div class="gcard-body">
+          <div class="gcard-service">Epoxy Flooring</div>
+          <div class="gcard-title">Metallic Epoxy Commercial Floor</div>
+          <div class="gcard-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Eatonton, GA</div>
+        </div>
+      </div>
+
+      <!-- 11 · New Construction 1 — SINGLE -->
+      <div class="gcard reveal" data-category="exterior" data-title="New Construction Exterior" data-location="Lake Oconee, GA" data-src="images/exterior-craftsman-1.jpg">
+        <div class="gcard-img">
+          <img src="images/exterior-craftsman-1.jpg" alt="New Construction Exterior Painting">
+          <span class="single-badge">COMPLETED PROJECT</span>
+          <div class="card-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        </div>
+        <div class="gcard-body">
+          <div class="gcard-service">Exterior Painting</div>
+          <div class="gcard-title">New Construction Exterior</div>
+          <div class="gcard-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Lake Oconee, GA</div>
+        </div>
+      </div>
+
+      <!-- 12 · New Construction 2 — SINGLE -->
+      <div class="gcard reveal" data-category="exterior" data-title="Custom Craftsman Home" data-location="Lake Oconee, GA" data-src="images/exterior-craftsman-2.jpg">
+        <div class="gcard-img">
+          <img src="images/exterior-craftsman-2.jpg" alt="Custom Craftsman Home Exterior">
+          <span class="single-badge">COMPLETED PROJECT</span>
+          <div class="card-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        </div>
+        <div class="gcard-body">
+          <div class="gcard-service">Exterior Painting</div>
+          <div class="gcard-title">Custom Craftsman Home</div>
+          <div class="gcard-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Lake Oconee, GA</div>
+        </div>
+      </div>
+
+    </div><!-- /ggrid -->
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lb-inner">
+    <button class="lb-close" id="lbClose">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      Close
+    </button>
+
+    <!-- Slider view (before/after) -->
+    <div class="lb-slider" id="lbSlider">
+      <div class="lb-sl-before"><img src="" id="lbBeforeImg" alt="Before"></div>
+      <div class="lb-sl-after" id="lbSlAfter"><img src="" id="lbAfterImg" alt="After"></div>
+      <div class="lb-sl-handle" id="lbSlHandle">
+        <div class="lb-sl-handle-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/><polyline points="9 6 15 12 9 18"/></svg>
+        </div>
+      </div>
+      <span class="lb-lbl lb-lbl-b">BEFORE</span>
+      <span class="lb-lbl lb-lbl-a">AFTER</span>
+    </div>
+
+    <!-- Single view -->
+    <div class="lb-single" id="lbSingle" style="display:none">
+      <img src="" id="lbSingleImg" alt="Project photo">
+    </div>
+
+    <div class="lb-info">
+      <div>
+        <div class="lb-service" id="lbService">Service</div>
+        <div class="lb-title" id="lbTitle">Project Title</div>
+        <div class="lb-location" id="lbLocation">Location, GA</div>
+      </div>
+      <div class="lb-nav">
+        <button class="lb-nav-btn" id="lbPrev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <button class="lb-nav-btn" id="lbNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container cta-banner-inner">
+    <div>
+      <h2>Ready to Start<br>Your <em>Project?</em></h2>
+      <p>Call Randy and the RMJ team today for a free, no-obligation estimate across the Lake Oconee area and Central Georgia.</p>
+    </div>
+    <div class="cta-btns">
+      <a href="contact.html" class="btnp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"/><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"/></svg>
+        Get a Free Quote
+      </a>
+      <a href="tel:7064731908" class="btno">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (706) 473-1908
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer id="ftr">
+  <div class="container ftr-inner">
+    <div class="ftr-brand">RMJ <span>Quality</span> Painting</div>
+    <div class="ftr-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy</a>
+    </div>
+    <p class="ftr-copy">&copy; 2025 RMJ Quality Painting LLC</p>
+  </div>
+</footer>
+
+<script>
+  // ── NAV ──
+  const hbg=document.getElementById('hbg'),mm=document.getElementById('mmenu');
+  hbg.addEventListener('click',()=>{hbg.classList.toggle('open');mm.classList.toggle('open')});
+  mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hbg.classList.remove('open');mm.classList.remove('open')}));
+
+  // ── SCROLL REVEAL ──
+  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+  // ── FILTERS ──
+  const allCards=[...document.querySelectorAll('.gcard')];
+  const countEl=document.getElementById('count');
+  document.getElementById('filters').addEventListener('click',e=>{
+    const btn=e.target.closest('.fbtn');
+    if(!btn)return;
+    document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const f=btn.dataset.filter;
+    let visible=0;
+    allCards.forEach(c=>{
+      const show=f==='all'||c.dataset.category===f;
+      c.style.display=show?'':'none';
+      if(show)visible++;
+    });
+    countEl.textContent=visible;
+  });
+
+  // ── CARD SLIDERS ──
+  let activeSl=null, slStartX=0;
+
+  function setSliderPos(slider, clientX) {
+    const rect=slider.getBoundingClientRect();
+    const pct=Math.max(2,Math.min(98,(clientX-rect.left)/rect.width*100));
+    slider.querySelector('.ba-after').style.clipPath=`inset(0 ${100-pct}% 0 0)`;
+    slider.querySelector('.ba-handle').style.left=pct+'%';
+    slider.classList.add('dragged');
+  }
+
+  document.querySelectorAll('.ba-slider').forEach(sl=>{
+    sl.addEventListener('mousedown',e=>{
+      activeSl=sl; slStartX=e.clientX;
+      setSliderPos(sl,e.clientX);
+      e.preventDefault();
+    });
+    sl.addEventListener('touchstart',e=>{
+      activeSl=sl; slStartX=e.touches[0].clientX;
+      setSliderPos(sl,e.touches[0].clientX);
+      e.preventDefault();
+    },{passive:false});
+  });
+
+  window.addEventListener('mousemove',e=>{
+    if(activeSl&&!lb.classList.contains('open')) setSliderPos(activeSl,e.clientX);
+  });
+  window.addEventListener('mouseup',e=>{
+    if(!activeSl)return;
+    if(Math.abs(e.clientX-slStartX)<5) openLb(activeSl.closest('.gcard'));
+    activeSl=null;
+  });
+  window.addEventListener('touchmove',e=>{
+    if(activeSl&&!lb.classList.contains('open')){setSliderPos(activeSl,e.touches[0].clientX);e.preventDefault();}
+  },{passive:false});
+  window.addEventListener('touchend',e=>{
+    if(!activeSl)return;
+    if(Math.abs(e.changedTouches[0].clientX-slStartX)<5) openLb(activeSl.closest('.gcard'));
+    activeSl=null;
+  });
+
+  // single photo cards click
+  document.querySelectorAll('.gcard-img').forEach(el=>{
+    el.addEventListener('click',()=>openLb(el.closest('.gcard')));
+  });
+
+  // ── LIGHTBOX ──
+  const lb=document.getElementById('lightbox');
+  const lbSlider=document.getElementById('lbSlider');
+  const lbSingle=document.getElementById('lbSingle');
+  const lbSlAfter=document.getElementById('lbSlAfter');
+  const lbSlHandle=document.getElementById('lbSlHandle');
+  const lbBeforeImg=document.getElementById('lbBeforeImg');
+  const lbAfterImg=document.getElementById('lbAfterImg');
+  const lbSingleImg=document.getElementById('lbSingleImg');
+  const lbTitle=document.getElementById('lbTitle');
+  const lbService=document.getElementById('lbService');
+  const lbLoc=document.getElementById('lbLocation');
+  let currentIdx=0;
+
+  function visibleCards(){return allCards.filter(c=>c.style.display!=='none');}
+
+  function openLb(card){
+    const vc=visibleCards();
+    currentIdx=vc.indexOf(card);
+    lbTitle.textContent=card.dataset.title||'Project';
+    lbService.textContent=card.querySelector('.gcard-service').textContent;
+    lbLoc.textContent=card.dataset.location||'';
+    if(card.dataset.before){
+      lbSlider.style.display='';
+      lbSingle.style.display='none';
+      lbBeforeImg.src=card.dataset.before;
+      lbAfterImg.src=card.dataset.after;
+      lbSlAfter.style.clipPath='inset(0 50% 0 0)';
+      lbSlHandle.style.left='50%';
+    } else {
+      lbSlider.style.display='none';
+      lbSingle.style.display='';
+      lbSingleImg.src=card.dataset.src||'';
+    }
+    lb.classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+
+  function closeLb(){lb.classList.remove('open');document.body.style.overflow='';}
+
+  // lightbox slider drag
+  let lbDrag=false, lbDragStartX=0;
+
+  function setLbPos(clientX){
+    const rect=lbSlider.getBoundingClientRect();
+    const pct=Math.max(2,Math.min(98,(clientX-rect.left)/rect.width*100));
+    lbSlAfter.style.clipPath=`inset(0 ${100-pct}% 0 0)`;
+    lbSlHandle.style.left=pct+'%';
+  }
+
+  lbSlider.addEventListener('mousedown',e=>{lbDrag=true;lbDragStartX=e.clientX;setLbPos(e.clientX);e.stopPropagation();});
+  lbSlider.addEventListener('touchstart',e=>{lbDrag=true;setLbPos(e.touches[0].clientX);},{passive:true});
+  window.addEventListener('mousemove',e=>{if(lbDrag)setLbPos(e.clientX);});
+  window.addEventListener('mouseup',()=>lbDrag=false);
+  window.addEventListener('touchmove',e=>{if(lbDrag)setLbPos(e.touches[0].clientX);},{passive:true});
+  window.addEventListener('touchend',()=>lbDrag=false);
+
+  document.getElementById('lbClose').addEventListener('click',closeLb);
+  lb.addEventListener('click',e=>{if(e.target===lb)closeLb();});
+  lb.querySelector('.lb-inner').addEventListener('click',e=>e.stopPropagation());
+
+  document.getElementById('lbPrev').addEventListener('click',()=>{
+    const vc=visibleCards();
+    currentIdx=(currentIdx-1+vc.length)%vc.length;
+    openLb(vc[currentIdx]);
+  });
+  document.getElementById('lbNext').addEventListener('click',()=>{
+    const vc=visibleCards();
+    currentIdx=(currentIdx+1)%vc.length;
+    openLb(vc[currentIdx]);
+  });
+  document.addEventListener('keydown',e=>{
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')closeLb();
+    if(e.key==='ArrowLeft')document.getElementById('lbPrev').click();
+    if(e.key==='ArrowRight')document.getElementById('lbNext').click();
+  });
+</script>
+</body>
+</html>

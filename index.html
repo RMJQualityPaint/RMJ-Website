@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RMJ Quality Painting | Professional Painting Contractor | Eatonton, GA</title>
-  <meta name="description" content="RMJ Quality Painting — Georgia's trusted painting contractor for 15+ years. Interior & exterior painting, pressure washing, epoxy flooring, drywall & more. Serving Eatonton, Milledgeville, Reynolds & surrounding areas.">
+  <title>Professional Painters in Lake Oconee, GA | RMJ Quality Painting</title>
+  <meta name="description" content="RMJ Quality Painting — professional painters serving the Lake Oconee area for 15+ years. Interior & exterior painting, epoxy flooring, pressure washing & more. Serving Eatonton, Milledgeville, Reynolds & surrounding areas. Free estimates.">
   <link rel="canonical" href="https://rmjqualitypainting.com/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,12 +12,12 @@
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://rmjqualitypainting.com/">
-  <meta property="og:title" content="RMJ Quality Painting | Painting Contractor in Eatonton, GA">
+  <meta property="og:title" content="Professional Painters in Lake Oconee, GA | RMJ Quality Painting">
   <meta property="og:description" content="Georgia's trusted painting contractor for 15+ years. Interior & exterior painting, pressure washing, epoxy flooring & more. Serving Eatonton, Milledgeville, Reynolds & surrounding areas. Free estimates.">
   <meta property="og:image" content="https://rmjqualitypainting.com/images/og-image.jpg">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="RMJ Quality Painting | Eatonton, GA">
+  <meta name="twitter:title" content="Professional Painters in Lake Oconee, GA | RMJ Quality Painting">
   <meta name="twitter:description" content="Professional painting contractor serving Central Georgia for 15+ years. Free estimates — call (706) 473-1908.">
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%23C41E3A'/><text y='.9em' font-size='80' x='10'>🖌</text></svg>">
@@ -170,7 +170,7 @@
     .ghdr{text-align:center;margin-bottom:56px}
     .ghdr .ssub{margin:0 auto;text-align:center}
     .ggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .gitem{aspect-ratio:4/3;background:#222;border-radius:var(--r);overflow:hidden;position:relative;cursor:pointer}
+    .gitem{aspect-ratio:4/3;background:#222;border-radius:var(--r);overflow:hidden;position:relative;cursor:pointer;display:block;text-decoration:none}
     .gba{display:grid;grid-template-columns:1fr 1fr;height:100%}
     .ghalf{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px}
     .ghalf.bef{background:#1a1a1a}
@@ -185,6 +185,18 @@
     .govtxt{color:var(--white);font-weight:700;font-size:14px;text-align:center}
     .govtxt svg{width:28px;height:28px;margin:0 auto 8px;display:block}
     .gnote{text-align:center;margin-top:32px;font-size:13px;color:var(--gray)}
+    .ba-slider{aspect-ratio:4/3;position:relative;overflow:hidden;cursor:ew-resize;user-select:none;-webkit-user-select:none}
+    .ba-before,.ba-after{position:absolute;inset:0}
+    .ba-before img,.ba-after img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none}
+    .ba-after{z-index:2;clip-path:inset(0 50% 0 0)}
+    .ba-handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:rgba(255,255,255,.9);transform:translateX(-50%);z-index:3;pointer-events:none}
+    .ba-handle-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;background:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 16px rgba(0,0,0,.3);pointer-events:auto;cursor:ew-resize}
+    .ba-handle-btn svg{color:var(--red);width:16px;height:16px;flex-shrink:0}
+    .ba-lbl{position:absolute;bottom:12px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:3px 8px;border-radius:2px;z-index:4;pointer-events:none}
+    .ba-lbl-b{left:12px;background:rgba(0,0,0,.5);color:rgba(255,255,255,.8)}
+    .ba-lbl-a{right:12px;background:var(--red);color:var(--white)}
+    .ba-hint{position:absolute;top:12px;left:50%;transform:translateX(-50%);font-size:10px;font-weight:600;letter-spacing:.5px;color:rgba(255,255,255,.95);background:rgba(0,0,0,.5);padding:4px 12px;border-radius:100px;z-index:4;white-space:nowrap;pointer-events:none;transition:opacity .4s}
+    .ba-slider.dragged .ba-hint{opacity:0}
     #property{padding:96px 0;background:var(--red);position:relative;overflow:hidden}
     #property::before{content:'';position:absolute;top:-50%;right:-10%;width:600px;height:600px;border-radius:50%;background:rgba(0,0,0,.15)}
     .prinn{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:2}
@@ -295,7 +307,6 @@
     <a href="#" class="nlogo">RMJ <span>Quality</span> Painting</a>
     <nav class="nlinks">
       <a href="#services">Services</a>
-      <a href="#about">About</a>
       <a href="gallery.html">Gallery</a>
       <a href="#property">Property Managers</a>
       <a href="contact.html" class="ncta">Free Quote</a>
@@ -306,8 +317,7 @@
 
 <nav class="mmenu" id="mmenu">
   <a href="#services">Services</a>
-  <a href="#about">About Us</a>
-  <a href="#gallery">Gallery</a>
+  <a href="gallery.html">Gallery</a>
   <a href="#property">Property Managers</a>
   <a href="#areas">Service Areas</a>
   <a href="#testimonials">Reviews</a>
@@ -317,16 +327,16 @@
 <section id="hero">
   <div class="hcont">
     <div class="hbadge"><span class="hbdot"></span>Serving Georgia's Heartland for 15+ Years</div>
-    <h1 class="hh1">Painting Contractor<br>in <em>Eatonton, GA</em></h1>
+    <h1 class="hh1">Professional Painters<br><em>Lake Oconee, GA</em></h1>
     <p class="hsub">Central Georgia's trusted painting and restoration experts for 15+ years. Residential, commercial, and property management — done right the first time.</p>
     <div class="hbtns">
-      <a href="#contact" class="btnp">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"/><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"/></svg>
-        Get a Free Quote
+      <a href="tel:7064731908" class="btnp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call Us
       </a>
-      <a href="#gallery" class="btno">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        See Our Work
+      <a href="contact.html" class="btno">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"/><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"/></svg>
+        Request a Free Quote
       </a>
     </div>
     <div class="hstats">
@@ -384,18 +394,10 @@
         <a href="#contact" class="btnp" style="display:inline-flex"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"/><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"/></svg>Start Your Project</a>
       </div>
       <div class="abimg reveal d2">
-        <div class="abph">
-          <div class="abph-badge">
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            Photo Here
-          </div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          <div class="abph-title">RMJ Team Photo</div>
-          <p>Add the team photo from the<br>original site's Our Mission section<br><span style="color:rgba(255,255,255,.5)">(the one with 3 people)</span></p>
-          <div class="abowner">
-            <div class="abowner-name">Randy</div>
-            <div class="abowner-title">Founder &amp; Owner, RMJ Quality Painting</div>
-          </div>
+        <img src="images/team-rmj.jpg" alt="RMJ Quality Painting Team" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 24px;background:linear-gradient(transparent,rgba(0,0,0,.85))">
+          <div class="abowner-name">Randy &amp; The RMJ Team</div>
+          <div class="abowner-title">Founder &amp; Owner, RMJ Quality Painting</div>
         </div>
       </div>
     </div>
@@ -410,14 +412,46 @@
       <p class="ssub">See the RMJ difference. Every project is a testament to our attention to detail and craftsmanship.</p>
     </div>
     <div class="ggrid">
-      <div class="gitem reveal"><div class="gba"><div class="ghalf bef"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span class="glbl">BEFORE</span></div><div class="ghalf aft"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span class="glbl">AFTER</span></div><div class="gdiv"></div></div><div class="gov"><div class="govtxt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Exterior Painting</div></div></div>
-      <div class="gitem reveal d1"><div class="gba"><div class="ghalf bef"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span class="glbl">BEFORE</span></div><div class="ghalf aft"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span class="glbl">AFTER</span></div><div class="gdiv"></div></div><div class="gov"><div class="govtxt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Interior Painting</div></div></div>
-      <div class="gitem reveal d2"><div class="gba"><div class="ghalf bef"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span class="glbl">BEFORE</span></div><div class="ghalf aft"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span class="glbl">AFTER</span></div><div class="gdiv"></div></div><div class="gov"><div class="govtxt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Epoxy Flooring</div></div></div>
-      <div class="gitem reveal"><div class="gba"><div class="ghalf bef"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span class="glbl">BEFORE</span></div><div class="ghalf aft"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span class="glbl">AFTER</span></div><div class="gdiv"></div></div><div class="gov"><div class="govtxt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Pressure Washing</div></div></div>
-      <div class="gitem reveal d1"><div class="gba"><div class="ghalf bef"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span class="glbl">BEFORE</span></div><div class="ghalf aft"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span class="glbl">AFTER</span></div><div class="gdiv"></div></div><div class="gov"><div class="govtxt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Cabinet Refinishing</div></div></div>
-      <div class="gitem reveal d2"><div class="gba"><div class="ghalf bef"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span class="glbl">BEFORE</span></div><div class="ghalf aft"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span class="glbl">AFTER</span></div><div class="gdiv"></div></div><div class="gov"><div class="govtxt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Staining &amp; Decks</div></div></div>
+      <!-- Brick Ranch -->
+      <div class="gitem reveal">
+        <div class="ba-slider">
+          <div class="ba-before"><img src="images/exterior-brick-before.jpg" alt="Before — Brick Ranch"></div>
+          <div class="ba-after"><img src="images/exterior-brick-after.jpg" alt="After — Brick Ranch"></div>
+          <div class="ba-handle"><div class="ba-handle-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/><polyline points="9 6 15 12 9 18"/></svg></div></div>
+          <span class="ba-lbl ba-lbl-b">BEFORE</span>
+          <span class="ba-lbl ba-lbl-a">AFTER</span>
+          <div class="ba-hint">← Drag to compare →</div>
+        </div>
+      </div>
+      <!-- Lake House -->
+      <div class="gitem reveal d1">
+        <div class="ba-slider">
+          <div class="ba-before"><img src="images/exterior-cabin-before.jpg" alt="Before — Lake House"></div>
+          <div class="ba-after"><img src="images/exterior-cabin-after.jpg" alt="After — Lake House"></div>
+          <div class="ba-handle"><div class="ba-handle-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/><polyline points="9 6 15 12 9 18"/></svg></div></div>
+          <span class="ba-lbl ba-lbl-b">BEFORE</span>
+          <span class="ba-lbl ba-lbl-a">AFTER</span>
+          <div class="ba-hint">← Drag to compare →</div>
+        </div>
+      </div>
+      <!-- Kitchen Cabinets -->
+      <div class="gitem reveal d2">
+        <div class="ba-slider">
+          <div class="ba-before"><img src="images/cabinet-kitchen-after.jpg" alt="Before — Kitchen Cabinets"></div>
+          <div class="ba-after"><img src="images/cabinet-kitchen-before.jpg" alt="After — Kitchen Cabinets"></div>
+          <div class="ba-handle"><div class="ba-handle-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/><polyline points="9 6 15 12 9 18"/></svg></div></div>
+          <span class="ba-lbl ba-lbl-b">BEFORE</span>
+          <span class="ba-lbl ba-lbl-a">AFTER</span>
+          <div class="ba-hint">← Drag to compare →</div>
+        </div>
+      </div>
     </div>
-    <p class="gnote reveal">Add your real before/after photos from your Google Business profile to replace these placeholders.</p>
+    <div style="text-align:center;margin-top:40px" class="reveal">
+      <a href="gallery.html" class="btnp">
+        View All Projects
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -519,7 +553,7 @@
       <div class="cfwrap reveal d2">
         <div class="ftitle">Get a Free Quote</div>
         <p class="fsub">We respond within 24 business hours.</p>
-        <form action="https://formsubmit.co/Rmjqualitypainting@yahoo.com" method="POST">
+        <form id="contactForm" action="https://formsubmit.co/Rmjqualitypainting@yahoo.com" method="POST">
           <input type="hidden" name="_subject" value="New Quote Request — RMJ Quality Painting">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_next" value="https://rmjqualitypainting.com/thank-you.html">
@@ -580,6 +614,37 @@
   mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hbg.classList.remove('open');mm.classList.remove('open')}));
   const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.1,rootMargin:'0px 0px -48px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+  // ── BEFORE/AFTER SLIDERS ──
+  let activeSl=null,slStartX=0;
+  function setSliderPos(sl,clientX){
+    const r=sl.getBoundingClientRect();
+    const pct=Math.max(2,Math.min(98,(clientX-r.left)/r.width*100));
+    sl.querySelector('.ba-after').style.clipPath=`inset(0 ${100-pct}% 0 0)`;
+    sl.querySelector('.ba-handle').style.left=pct+'%';
+    sl.classList.add('dragged');
+  }
+  document.querySelectorAll('.ba-slider').forEach(sl=>{
+    sl.addEventListener('mousedown',e=>{activeSl=sl;slStartX=e.clientX;setSliderPos(sl,e.clientX);e.preventDefault();});
+    sl.addEventListener('touchstart',e=>{activeSl=sl;slStartX=e.touches[0].clientX;setSliderPos(sl,e.touches[0].clientX);e.preventDefault();},{passive:false});
+  });
+  window.addEventListener('mousemove',e=>{if(activeSl)setSliderPos(activeSl,e.clientX);});
+  window.addEventListener('mouseup',()=>activeSl=null);
+  window.addEventListener('touchmove',e=>{if(activeSl){setSliderPos(activeSl,e.touches[0].clientX);e.preventDefault();}},{passive:false});
+  window.addEventListener('touchend',()=>activeSl=null);
+
+  // Dual submit: Apps Script (Google Sheets) + FormSubmit (email)
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwqu3_QIyJ-DmPmO0dabvylg67LezxrO0kBwzw8WCKJSxGxqVmjNsYMsd26HMabx8V2/exec';
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = this;
+    fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: new FormData(form)
+    }).catch(()=>{});
+    form.submit();
+  });
 </script>
 </body>
 </html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | RMJ Quality Painting</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%23C41E3A'/><text y='.9em' font-size='80' x='10'>🖌</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--red:#C41E3A;--red-dark:#9B1530;--red-light:#D63251;--black:#0A0A0A;--dark:#111111;--white:#FFFFFF;--off:#F8F8F8;--gl:#E8E8E8;--gray:#888888;--gd:#555555;--fd:'Playfair Display',Georgia,serif;--fb:'Montserrat',sans-serif;--r:4px;--rl:8px;--tr:all .3s cubic-bezier(.4,0,.2,1)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--fb);font-size:16px;line-height:1.6;color:var(--dark);background:var(--black);min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden}
+    h1,h2,h3{font-family:var(--fd);line-height:1.2}
+    a{text-decoration:none;color:inherit}
+
+    /* BG */
+    body::before{content:'';position:fixed;top:-20%;right:-10%;width:55%;height:140%;background:linear-gradient(135deg,var(--red) 0%,#8B0000 100%);clip-path:polygon(25% 0%,100% 0%,100% 100%,0% 100%);opacity:.1;pointer-events:none}
+    body::after{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:80px 80px;pointer-events:none}
+
+    /* NAV */
+    #hdr{padding:0 24px;height:80px;display:flex;align-items:center;position:relative;z-index:10;border-bottom:1px solid rgba(255,255,255,.06)}
+    .navi{width:100%;max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .nlogo{font-family:var(--fd);font-size:22px;font-weight:700;color:var(--white);letter-spacing:-.5px}
+    .nlogo span{color:var(--red)}
+
+    /* MAIN */
+    main{flex:1;display:flex;align-items:center;justify-content:center;padding:48px 24px;position:relative;z-index:2}
+    .ty-card{max-width:600px;width:100%;text-align:center}
+
+    /* Check animation */
+    .ty-icon{width:88px;height:88px;margin:0 auto 32px;position:relative}
+    .ty-circle{width:88px;height:88px;border-radius:50%;background:rgba(196,30,58,.15);border:2px solid rgba(196,30,58,.3);display:flex;align-items:center;justify-content:center;animation:pop .5s cubic-bezier(.175,.885,.32,1.275) both}
+    @keyframes pop{0%{transform:scale(0);opacity:0}100%{transform:scale(1);opacity:1}}
+    .ty-circle svg{width:44px;height:44px;color:var(--red-light)}
+    .ty-circle svg path,.ty-circle svg polyline{stroke-dasharray:60;stroke-dashoffset:60;animation:draw .5s .3s ease forwards}
+    @keyframes draw{to{stroke-dashoffset:0}}
+
+    .ty-tag{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--red-light);margin-bottom:16px;animation:fadeup .5s .4s both}
+    .ty-h1{font-size:clamp(32px,5vw,52px);font-weight:700;color:var(--white);margin-bottom:16px;animation:fadeup .5s .5s both}
+    .ty-h1 em{font-style:italic;color:var(--red-light)}
+    .ty-sub{font-size:17px;color:rgba(255,255,255,.6);line-height:1.7;max-width:480px;margin:0 auto 40px;animation:fadeup .5s .6s both}
+    @keyframes fadeup{0%{opacity:0;transform:translateY(16px)}100%{opacity:1;transform:translateY(0)}}
+
+    /* What's next */
+    .ty-steps{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--rl);padding:32px;margin-bottom:40px;text-align:left;animation:fadeup .5s .7s both}
+    .ty-steps-title{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:20px}
+    .ty-step{display:flex;align-items:flex-start;gap:16px;margin-bottom:20px}
+    .ty-step:last-child{margin-bottom:0}
+    .ty-step-num{width:28px;height:28px;border-radius:50%;background:var(--red);color:var(--white);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+    .ty-step-txt strong{display:block;color:var(--white);font-size:14px;font-weight:700;margin-bottom:2px}
+    .ty-step-txt span{font-size:13px;color:rgba(255,255,255,.5);line-height:1.5}
+
+    /* CTA buttons */
+    .ty-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;animation:fadeup .5s .8s both}
+    .btnp{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:var(--white);font-family:var(--fb);font-size:14px;font-weight:700;padding:16px 28px;border-radius:var(--r);border:2px solid var(--red);transition:var(--tr)}
+    .btnp:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(196,30,58,.4)}
+    .btno{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--white);font-family:var(--fb);font-size:14px;font-weight:700;padding:16px 28px;border-radius:var(--r);border:2px solid rgba(255,255,255,.2);transition:var(--tr)}
+    .btno:hover{border-color:var(--white);background:rgba(255,255,255,.06);transform:translateY(-2px)}
+
+    /* FOOTER */
+    #ftr{padding:24px;border-top:1px solid rgba(255,255,255,.06);position:relative;z-index:2;text-align:center}
+    #ftr p{font-size:12px;color:rgba(255,255,255,.25)}
+
+    @media(max-width:480px){.ty-btns{flex-direction:column;align-items:center}.ty-btns a{width:100%;justify-content:center}}
+  </style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="navi">
+    <a href="index.html" class="nlogo">RMJ <span>Quality</span> Painting</a>
+  </div>
+</header>
+
+<main>
+  <div class="ty-card">
+
+    <div class="ty-icon">
+      <div class="ty-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="ty-tag">Request Received</div>
+    <h1 class="ty-h1">Thank You —<br>We'll Be in Touch <em>Soon.</em></h1>
+    <p class="ty-sub">Your estimate request has been sent to the RMJ team. We'll reach out as soon as possible — usually within a few hours.</p>
+
+    <div class="ty-steps">
+      <div class="ty-steps-title">What happens next</div>
+      <div class="ty-step">
+        <div class="ty-step-num">1</div>
+        <div class="ty-step-txt">
+          <strong>We review your request</strong>
+          <span>Randy personally reviews every estimate request to make sure we can serve your project well.</span>
+        </div>
+      </div>
+      <div class="ty-step">
+        <div class="ty-step-num">2</div>
+        <div class="ty-step-txt">
+          <strong>We'll contact you to schedule a visit</strong>
+          <span>We'll call or text you to set up a convenient time for a free on-site estimate.</span>
+        </div>
+      </div>
+      <div class="ty-step">
+        <div class="ty-step-num">3</div>
+        <div class="ty-step-txt">
+          <strong>You get a clear, honest quote</strong>
+          <span>No hidden fees, no pressure. Just a straightforward estimate so you can make the best decision for your project.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ty-btns">
+      <a href="tel:7064731908" class="btnp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call Us Now
+      </a>
+      <a href="index.html" class="btno">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        Back to Home
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<footer id="ftr">
+  <p>&copy; 2025 RMJ Quality Painting LLC &nbsp;·&nbsp; Eatonton, Georgia &nbsp;·&nbsp; (706) 473-1908</p>
+</footer>
+
+</body>
+</html>
